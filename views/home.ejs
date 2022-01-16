@@ -1,0 +1,20 @@
+<%- include('./navbar2.html') %>
+    <h1>Welcome %>
+    </h1>
+    </h1>
+    <marquee bgcolor="red" width="100%" direction="left" height="20px">
+        <span>
+
+            <% result.forEach(element=> { %> **
+                <%= element.msg%>
+                    <%});%>
+
+
+        </span>
+    </marquee>
+    <style>
+        marquee {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>

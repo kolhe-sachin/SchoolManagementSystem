@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABOUT</title>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <nav>
+
+      <ul>
+        <li><a href="/mainHome">HOME</a></li>
+        <li><a href="/about">ABOUT</a></li>
+        <li><a href="/">STUDENTS</a></li>
+        <li><a href="/adminlogin">ADMIN</a></li>
+        <li><a href="/images">GALLERY</a></li>
+        <li><a href="/contact">CONTACT</a></li>
+        <li><a href="/school">BACK</a></li>
+      </ul>
+    </nav>
+
+    <div class="about-section">
+      <h1>About Us Page</h1>
+      <p>The Vision of Schools Nacharam, one of the Top International Schools in Hyderabad.</p>
+      <p> is “To impart world-class education that shall foster academic excellence along </p>
+      <p>with physical fitness. To inculcate in each student Psychological and spiritual </p>
+      <p>health, self-discipline, social consciousness, and concern for the environment through </p>
+      <p>our systems and practices.</p>
+    </div>
+
+    <h2 style="text-align:center">Our Team</h2>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img src="images/students1.png" alt="Jane" style="width:100%">
+          <div class="container">
+            <h2>STUDENTS</h2>
+            <p>A student is primarily a person enrolled in a school or other </p>
+            <p>educational institution and who is under learning with goals of </p>
+            <p>acquiring knowledge, developing professions and achieving employment at desired field..</p>
+            </p>
+            <p>schools@example.com</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="images/fac.png" alt="Mike" style="width:100%">
+          <div class="container">
+            <h2>FACULTY</h2>
+            <p>The teaching role of faculty members reflects their centrality in </p>
+            <p>addressing the primary educational mission among colleges and universities</p>
+            <p>p As faculty members teach, they disseminate and impart basic or applied .</p>
+            <p>knowledge to students and assist students with the learning process and applying the knowledge.</p>
+            <p>schools@example.com</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="images/princ.png" alt="John" style="width:100%">
+          <div class="container">
+            <h2>John Doe</h2>
+            <p class="title">PRINCIPLE</p>
+            <p>AN EXCELLENT VISION PERSON </p>
+            <p>john@example.com</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+      }
+
+      .about-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #474e5d;
+        color: white;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .container::after,
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .title {
+        color: grey;
+      }
+
+      .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .button:hover {
+        background-color: #555;
+      }
+
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      /* .wrapper {
+        background: url(/images/main.png) no-repeat center center;
+        min-height: 30rem;
+      } */
+
+      nav {
+        width: 100%;
+        height: 80px;
+        background-color: #0005;
+        line-height: 80px;
+      }
+
+      nav ul {
+        float: right;
+        margin: 0;
+        margin-right: 1.9rem;
+      }
+
+      nav ul li {
+        list-style-type: none;
+        display: inline-block;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 20px;
+      }
+
+      nav ul li:hover {
+        background-color: coral;
+        color: #000;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    </style>

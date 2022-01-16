@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+<title>
+
+</title>
+
+<body>
+    <form action="/attendance" method="post">
+        <% if(msg==='success' ) { %>
+            <div>
+                <strong style="color: green;"></strong>
+                <h4 style="color: green;">
+                    <p>attendance sucessfully updated! </p>
+                </h4>
+            </div>
+            <%} else if(msg==='failure' ){ %>
+                <div>
+                    <strong style="color: red;"></strong>
+                    <h4 style="color: red;">
+                        <p>You have already marked the attendance! </p>
+                    </h4>
+                </div>
+                <%}%>
+
+                    <div>
+                        <button id="demo">ADD ATTENDANCE</button>
+                    </div>
+    </form>
+
+</body>
+
+</html>
+</body>
+
+</html>

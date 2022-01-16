@@ -1,0 +1,94 @@
+<%- include('./navbar.html') %>
+    <h1 style="color: black;">STUDENT DATA.........</h3>
+        <br>
+        <style>
+            table,
+            th,
+            td {
+                background-color: cornsilk;
+                padding: 20px;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+
+        <div class="container bg-light text-dark">
+            <table class="table table-striped">
+
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Class</th>
+                        <th>Section</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Source of Income</th>
+                        <th>Income</th>
+                        <th>age</th>
+                        <th>Bio</th>
+                        <th>Date of Admission</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%records.forEach(element=> { %>
+                        <tr>
+                            <td>
+                                <%=element.studentId%>
+                            </td>
+                            <td>
+                                <%=element.class%>
+                            </td>
+                            <td>
+                                <%=element.section%>
+                            </td>
+                            <td>
+                                <%=element.fname%>
+                            </td>
+                            <td>
+                                <%= element.lname %>
+                            </td>
+                            <td>
+                                <%=element.email %>
+                            </td>
+                            <td>
+                                <%=element.gender %>
+                            </td>
+                            <td>
+                                <%=element.incomeSource %>
+                            </td>
+                            <td>
+                                <%=element.value %>
+                            </td>
+                            <td>
+                                <%=element.age %>
+                            </td>
+                            <td>
+                                <%=element.bio %>
+                            </td>
+                            <td>
+                                <%=element.DateOfAdmission %>
+                            </td>
+                            <td><a href="/deleteRecord?email=<%=element.email%>">DELETE</a></td>
+                            <td><a
+                                    href="/updateRecord?fname=<%=element.fname%>&studentId=<%=element.studentId%>">UPDATE</a>
+                            </td>
+                        </tr>
+
+                        <%});%>
+                </tbody>
+            </table>
+            <br>
+            <% if(pageNo < 6) {%>
+                <a style="margin-left: 50px;"
+                    href="http://localhost:3000/showRecord?page=<%=parseInt(pageNo)+1%>&limit=<%=limitvalue%>">NEXT</a>
+                <% } %>
+
+                    <% if(pageNo> 1) {%>
+                        <a style="margin-left: 100px;"
+                            href="http://localhost:3000/showRecord?page=<%=parseInt(pageNo)-1%>&limit=<%=limitvalue%>">PREVIOUS</a>
+                        <% } %>
+        </div>

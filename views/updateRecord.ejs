@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <%- include('./navbar.html') %>
+    <link rel="stylesheet" type="text/css" href="style/register.css" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <title>Update</title>
+</head>
+
+<body>
+  <h2>UpdateRegistration</h2>
+  <form action="/update_auth" method="post">
+    <div class="container">
+      <tr>
+        <td>
+          <label for="FirstName"><b>FirstName</b></label>
+          <input type="text" name="first_name" value="<%=fname%>" />
+        </td>
+        <label for="studentId"><b>student ID</b></label>
+        <input type="text" name="studentId" value="<%=studentId%>" readonly />
+        <%result.forEach(element=> { %>
+          <td>
+            <label for="class"><b>class</b></label>
+            <input type="text" name="class" value="<%=element.class%>" readonly />
+          </td>
+          <td>
+            <label for="class"><b>section</b></label>
+            <input type="text" name="section" value="<%=element.section%>" />
+          </td>
+          <label for="class"><b>Last Name</b></label>
+          <input type="text" name="lname" value="<%=element.lname%>" />
+
+          <label for="class"><b>Email</b></label>
+          <input type="text" name="email" value="<%=element.email%>" />
+
+          <label for="class"><b>Gender</b></label>
+          <input type="text" name="class" value="<%=element.gender%>" />
+
+          <label for="class"><b>Source of Income</b></label>
+          <input type="text" name="value" value="<%=element.incomeSource%>" />
+
+          <label for="class"><b>Income</b></label>
+          <input type="text" name="income" value="<%=element.value%>" readonly />
+
+          <label for="class"><b>Age</b></label>
+          <input type="text" name="age" value="<%=element.age%>" />
+
+          <label for="class"><b>Bio</b></label>
+          <input type="text" name="bio" value="<%=element.bio%>" />
+
+          <label for="class"><b>Date OF admission</b></label>
+          <input type="date" name="datead" value="<%=element.DateOfAdmission%>" />
+
+          <td><input type="submit" value="Update" /></td>
+
+          <%});%>
+      </tr>
+    </div>
+  </form>
+</body>
+
+</html>
